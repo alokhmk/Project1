@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <title>
+        Calculator App
+    </title>
+    <link rel="stylesheet" href="calc.css">
+</head>
+
+<body>
+    <div>
+        <form>
+            <label>Enter the first number:</label>
+            <input id="first"></br>
+            </br>
+            <label>Enter the Second number:</label>
+            <input id="second">
+
+        </form></br>
+        
+        <select id="operator">
+            <option>+</option>
+            <option>-</option>
+            <option>*</option>
+            <option>/</option>
+        </select>
+
+        <button onclick="calculate()">Submit</button>
+        <h2>Result:</h2>
+        <h1 id="resultText"></h1>
+    </div>
+    <script>
+
+        function calculate() {
+            let no1 = parseInt(document.getElementById("first").value);
+            let no2 = parseInt(document.getElementById("second").value);
+            let op = document.getElementById("operator").value;
+            document.getElementById("resultText").innerText=result;
+            var result = 0;
+
+            if (op == "+") {
+                result = no1 + no2;
+            }
+            else if (op == "-") {
+                result = no1 - no2;
+            }
+            else if (op == "*") {
+                result = no1 * no2;
+            }
+            else if (op == "/") {
+                result = no1 / no2;
+            }
+            document.getElementById("resultText").innerText=result;
+
+            event.preventDefault();   /*to prevent page refresh*/
+        }
+
+        
+    </script>
+<a href="./alok.html"><h3>Go Back</h3></a>
+</body>
+
+</html>
